@@ -1,0 +1,32 @@
+#playfield {
+  position: relative;
+  width: 90%;
+  height: 400px;
+  border: 2px orange solid;
+}
+
+@unit: 18px;
+@unit-radius: 5px;
+
+.segment {
+  position: absolute;
+  width: @unit;
+  height: @unit;
+  border-radius: @unit-radius;
+}
+
+.color(@border-color; @fill-color) {
+  border: 1px @border-color solid;
+  background-color: @fill-color;
+}
+
+.head {
+  .segment;
+  .color(red, pink);
+  border-radius: 8px;
+}
+
+.body {
+  .segment;
+  .color(blue, lightblue);
+}
